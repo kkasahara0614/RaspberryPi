@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Button from '@material-ui/core/Button';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
@@ -8,30 +7,31 @@ import Grid from '@material-ui/core/Grid';
 import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
-import { makeStyles } from '@material-ui/core/styles';
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
 import TvIcon from '@material-ui/icons/Tv';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {tv_power,input_switching,mute,_1,_2,_3,_4,_5,_6,_7,_8,_9,_10,_11,_12,vol_up,vol_down,schedule,sel_up,sel_down} from './functions';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
       
       <Grid container spacing={3} alignItems="center" justify="center">
           <Grid item xs>
-              <IconButton color="primary" aria-label="upload picture" component="span">
+              <IconButton color="primary" aria-label="upload picture" component="span" onClick={tv_power}>
                   <PowerSettingsNewIcon color="secondary" style={{ fontSize: 70 }}/>
               </IconButton>
           </Grid>
           <Grid item xs alignItems="center">
-              <Button variant="outlined" color="secondary" style={{ fontSize: '18px' }} >
+              <Button onClick={input_switching} variant="outlined" color="secondary" style={{ fontSize: '18px' }}>
                   入力切替
               </Button>
           </Grid>
           <Grid item xs>
-              <IconButton color="primary" aria-label="upload picture" component="span">
+              <IconButton onClick={mute} color="primary" aria-label="upload picture" component="span">
                   <VolumeOffIcon color="secondary" style={{ fontSize: 70 }}/>
               </IconButton>
           </Grid>
@@ -40,19 +40,19 @@ class App extends Component {
       <Grid container spacing={1} alignItems="center" justify="center">
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_1} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   1
               </Button>
           </Grid>
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_2} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   2
               </Button>
           </Grid>
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_3} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   3
               </Button>
           </Grid>
@@ -62,19 +62,19 @@ class App extends Component {
       <Grid container spacing={1} alignItems="center" justify="center">
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_4} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   4
               </Button>
           </Grid>
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_5} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   5
               </Button>
           </Grid>
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_6} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   6
               </Button>
           </Grid>
@@ -84,19 +84,19 @@ class App extends Component {
           <Grid container spacing={1} alignItems="center" justify="center">
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_7} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   7
               </Button>
           </Grid>
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_8} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   8
               </Button>
           </Grid>
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_9} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   9
               </Button>
           </Grid>
@@ -106,19 +106,19 @@ class App extends Component {
       <Grid container spacing={1} alignItems="center" justify="center">
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_10} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   10
               </Button>
           </Grid>
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px' , color: '#aaaaaa'}} >
+              <Button onClick={_11} style={{ fontSize: '30px' , color: '#aaaaaa'}} >
                   11
               </Button>
           </Grid>
           <Grid item xs/>
           <Grid item xs>
-              <Button style={{ fontSize: '30px', color: '#aaaaaa' }} >
+              <Button onClick={_12} style={{ fontSize: '30px', color: '#aaaaaa' }} >
                   12
               </Button>
           </Grid>
@@ -134,10 +134,10 @@ class App extends Component {
                       </IconButton>
                   </Grid>
                   <Grid item xs={6}>
-                      <IconButton color="primary" aria-label="upload picture" component="span">
+                      <IconButton onClick={vol_up} color="primary" aria-label="upload picture" component="span">
                           <AddCircleIcon color="secondary" style={{ fontSize: 30 }}/>
                       </IconButton>
-                      <IconButton color="primary" aria-label="upload picture" component="span">
+                      <IconButton onClick={vol_down} color="primary" aria-label="upload picture" component="span">
                           <RemoveCircleIcon color="secondary" style={{ fontSize: 30 }}/>
                       </IconButton>
                   </Grid>
@@ -145,7 +145,7 @@ class App extends Component {
           </Grid>
       
           <Grid item xs>
-              <Button variant="outlined" color="secondary" style={{ fontSize: '20px' }} >
+              <Button onClick={schedule} variant="outlined" color="secondary" style={{ fontSize: '20px' }} >
                   番組表
               </Button>
           </Grid>
@@ -158,10 +158,10 @@ class App extends Component {
                       </IconButton>
                   </Grid>
               <Grid item xs={6}>
-                  <IconButton color="primary" aria-label="upload picture" component="span">
+                  <IconButton onClick={sel_up} color="primary" aria-label="upload picture" component="span">
                       <ExpandLessIcon color="secondary" style={{ fontSize: 30 }}/>
                   </IconButton>
-                  <IconButton color="primary" aria-label="upload picture" component="span">
+                  <IconButton onClick={sel_down} color="primary" aria-label="upload picture" component="span">
                       <ExpandMoreIcon color="secondary" style={{ fontSize: 30 }}/>
                   </IconButton>
               </Grid>
